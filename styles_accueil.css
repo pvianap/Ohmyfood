@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand:wght@300;400;500;600;700&display=swap');
+html {
+  --primary-font: roboto;
+  --title-font: Shrikhand;
+  --grey: hsl(0deg, 0%, 92%);
+  --lightergrey: rgb(251, 249, 249);
+  --darkergrey: rgb(96, 96, 96);
+  --primary-color: #9356dc;
+  --secondary-color: #ff79da;
+  --tertiary-color: #99e2d0;
+  --margin-one: 1vw;
+  --margin-two: 5vw;
+  --margin-three: 8vw;
+  --margin-four: 12vw;
+  --font-size-fonctionnement: 4.1vw;
+  font-family: var(--primary-font);
+}
+* {
+  box-sizing: border-box;
+}
+
+body,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 7vw;
+}
+
+p {
+  font-size: 4vw;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+header img {
+  width: 50vw;
+  margin: var(--margin-two);
+}
+
+/* SECTION ONE */
+.section-one {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--lightergrey);
+  text-align: center;
+}
+
+.localisation-bar {
+  background-color: var(--grey);
+  padding: var(--margin-two);
+  width: 100%;
+  box-shadow: inset 0px 5px 9px -8px rgba(0, 0, 0, 0.57);
+  font-size: 4.5vw;
+  font-weight: 600;
+  color: rgba(52, 52, 52, 0.8);
+}
+
+.localisation-bar i {
+  margin-right: 3vw;
+  font-size: ;
+}
+
+.invitation {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--margin-four);
+  background-color: hsl(0deg, 0%, 96%);
+}
+
+.invitation h1 {
+  text-align: center;
+}
+
+.invitation p {
+  color: hsl(0deg, 0%, 38%);
+}
+
+.invitation button {
+  height: 14vw;
+  width: 60vw;
+  border-radius: 10vw;
+  font-family: var(--primary-font);
+  font-size: 4.1vw;
+  font-weight: 450;
+  color: white;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  border: none;
+  box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 39%);
+  margin: var(--margin-two);
+}
+
+/* SECTION TWO */
+
+.section-two {
+  width: 100%;
+  padding: var(--margin-two);
+}
+
+.section-two ol {
+  counter-reset: item;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.section-two li {
+  background-color: var(--lightergrey);
+  max-width: 100%;
+  height: 20vw;
+  font-size: var(--font-size-fonctionnement);
+  font-weight: 500;
+  margin: 3vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 6vw;
+  box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 22%);
+}
+.section-two li:before {
+  content: counter(item) '  ';
+  counter-increment: item;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  width: 7vw;
+  height: 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-left: -2vw;
+}
+
+.section-two i {
+  margin: var(--margin-two);
+  color: hsl(0deg, 0%, 50%);
+}
+/* SECTION THREE */
+
+.section-three {
+  width: 100%;
+  background-color: var(--lightergrey);
+  padding: var(--margin-two);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--grey);
+  padding-bottom: 15vw;
+}
+
+.nouveau {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5%;
+  width: 22vw;
+  height: 8vw;
+  font-weight: 600;
+  color: hsl(165deg, 94%, 35%);
+  align-items: center;
+  justify-content: center;
+  background-color: var(--tertiary-color);
+  position: absolute;
+  right: 4vw;
+  margin: 3vw;
+}
+
+.restaurant-card {
+  width: 100%;
+  border-radius: 3%;
+  background-color: white;
+  margin-bottom: var(--margin-two);
+}
+
+.restaurant-card img {
+  width: 100%;
+  border-radius: 3%;
+  height: 49vw;
+  object-fit: cover;
+  object-position: 0px 60%;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3vw;
+  position: relative;
+}
+
+.fa-solid.fa-heart {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fa-regular.fa-heart {
+  opacity: 1;
+  transition: opacity 0.5ms ease-in;
+}
+
+.fa-solid.fa-heart:hover {
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-description i {
+  font-size: 7vw;
+  margin: var(--margin-one);
+  color: hsl(0deg, 0%, 35%);
+  position: absolute;
+  right: 0;
+}
+
+.card-description h2 {
+  font-size: 5vw;
+  font-weight: 700;
+}
+
+.card-description h3 {
+  font-size: 4vw;
+  font-weight: 500;
+  color: hsl(0deg, 0%, 35%);
+}
+
+img {
+  width: 100%;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: hsl(0deg, 0%, 21%);
+  color: white;
+  padding: var(--margin-two);
+}
+
+.footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 2vw;
+}
+.footer i {
+  margin-right: 3vw;
+}
+
+.footer h4 {
+  font-family: var(--title-font);
+  font-size: 5vw;
+  font-weight: 400;
+}
+.footer img {
+  width: 20vw;
+}
+
+/* LOADER */
+
+.loader {
+  z-index: 1000;
+  background-color: #ccc;
+  position: fixed;
+  top: 38vw;
+  left: 23vw;
+  align-self: center;
+  width: 100%;
+  height: 100%;
+  width: 50vw;
+  height: 50vw;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  content: 'Loading';
+  text-decoration: dashed;
+  color: var(--secondary-color);
+  font-size: 15vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  animation: loading 3s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.appear {
+  animation: appearing 3s 2.5s ease-in-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes appearing {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+  }
+  90% {
+    opacity: 1;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+  }
+  100% {
+    opacity: 0;
+  }
+}

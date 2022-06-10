@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand:wght@300;400;500;600;700&display=swap');
+html {
+  --primary-font: roboto;
+  --title-font: Shrikhand;
+  --grey: hsl(0deg, 0%, 96%);
+  --lightergrey: rgb(251, 249, 249);
+  --darkergrey: hsl(0deg, 0%, 64%);
+  --primary-color: #9356dc;
+  --secondary-color: #ff79da;
+  --tertiary-color: #99e2d0;
+  --margin-one: 1vw;
+  --margin-two: 5vw;
+  --margin-three: 8vw;
+  --margin-four: 12vw;
+  --font-size-fonctionnement: 4.1vw;
+  font-family: var(--primary-font);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: var(--margin-one);
+  margin-bottom: var(--margin-one);
+  height: 12vw;
+}
+header img {
+  width: 100%;
+  height: 65vw;
+  object-fit: cover;
+  z-index: -10;
+}
+
+.logo {
+  margin: var(--margin-one);
+  width: 38vw;
+  height: initial;
+  object-position: initial;
+}
+
+header i {
+  position: absolute;
+  font-size: 5vw;
+  left: 0;
+  margin-left: var(--margin-two);
+}
+
+/* MENU */
+
+.menu {
+  z-index: 2;
+  background-color: var(--grey);
+  margin-top: -10vw;
+  border-top-left-radius: 6vw;
+  border-top-right-radius: 6vw;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu h1 {
+  font-family: var(--title-font);
+  font-size: 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  opacity: 0;
+  animation: appearing 1.5s ease-in-out forwards;
+}
+
+.menu h1 i {
+  color: var(--darkergrey);
+  font-size: 7vw;
+  margin-right: 6vw;
+}
+
+.submenu {
+}
+
+.submenu h2 {
+  color: var(--darkergrey);
+  font-size: 4vw;
+  margin-top: var(--margin-three);
+  opacity: 0;
+  animation: appearing 0.5s ease-in-out forwards;
+}
+
+.food-card {
+  background-color: white;
+  border-radius: 3vw;
+  width: 90vw;
+  height: 18vw;
+  margin-top: 3vw;
+  opacity: 0;
+  animation: appearing 1s ease-in-out forwards;
+  display: flex;
+  justify-content: space-between;
+}
+
+.food-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+}
+
+.food-card h3 {
+  font-size: 5vw;
+}
+
+.food-card h5 {
+  font-size: 4vw;
+}
+
+.food-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: var(--margin-one);
+  margin-right: 5vw;
+}
+
+.food-description p {
+  color: var(--darkergrey);
+  font-size: 4vw;
+}
+
+button {
+  height: 14vw;
+  width: 60vw;
+  border-radius: 10vw;
+  font-family: var(--primary-font);
+  font-size: 4.1vw;
+  font-weight: 450;
+  color: white;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  border: none;
+  box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 39%);
+  margin: var(--margin-two);
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: hsl(0deg, 0%, 21%);
+  color: white;
+  padding: var(--margin-two);
+}
+
+.footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 2vw;
+  font-size: 4vw;
+}
+.footer i {
+  margin-right: 3vw;
+  font-size: 4vw;
+}
+
+.footer h4 {
+  font-family: var(--title-font);
+  font-size: 5vw;
+  font-weight: 400;
+}
+.footer img {
+  width: 20vw;
+}
+
+/* ANIMATIONS */
+
+.one {
+  opacity: 0;
+  animation: appearing 1s 0.5s ease-in-out forwards;
+}
+
+.two {
+  opacity: 0;
+  animation: appearing 1s 0.75s ease-in-out forwards;
+}
+
+.three {
+  opacity: 0;
+  animation: appearing 1s 1s ease-in-out forwards;
+}
+
+.four {
+  opacity: 0;
+  animation: appearing 1.2s 1.2s ease-in-out forwards;
+}
+
+.fa-solid.fa-circle-check {
+  width: 0;
+  height: 100%;
+  background-color: var(--tertiary-color);
+  display: flex;
+  border-radius: 0 3vw 3vw 0;
+  transition: 220ms ease-in-out;
+  font-size: 0;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  opacity: 0;
+}
+
+.food-card-content:active ~ .fa-solid.fa-circle-check {
+  background-color: var(--tertiary-color);
+  width: 20vw;
+  opacity: 1;
+}
+
+@keyframes appearing {
+  0% {
+    margin-top: 10vw;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
