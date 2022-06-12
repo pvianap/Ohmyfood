@@ -99,6 +99,25 @@ header i {
   margin-right: 6vw;
 }
 
+.fa-regular.fa-heart::before {
+  opacity: 0.5;
+  transition: all 0.5s ease-in;
+  font-weight: 200;
+}
+
+.fa-regular.fa-heart:hover::before {
+  opacity: 1.2;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
 .submenu {
 }
 
