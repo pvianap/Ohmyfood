@@ -114,6 +114,12 @@ header img {
   border: none;
   box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 39%);
   margin: var(--margin-two);
+  transition: all 1s ease-in-out;
+}
+
+.invitation button:hover {
+  opacity: 0.5;
+  box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 80%);
 }
 
 /* SECTION TWO */
@@ -320,13 +326,13 @@ img {
   align-items: center;
   justify-content: center;
   display: flex;
-  animation: loading 3s ease-in-out;
+  animation: loading 1.8s ease-in-out;
   animation-fill-mode: forwards;
   opacity: 1;
 }
 
 .appear {
-  animation: appearing 3s 2.5s ease-in-out;
+  animation: appearing 2s 1.5s ease-in-out;
   animation-fill-mode: forwards;
   opacity: 0;
 }
