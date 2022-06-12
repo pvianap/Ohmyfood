@@ -20,6 +20,15 @@ html {
   box-sizing: border-box;
 }
 
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  outline: 0;
+}
+
 body,
 h2,
 h3,
