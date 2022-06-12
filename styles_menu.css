@@ -166,8 +166,13 @@ button {
   border: none;
   box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 39%);
   margin: var(--margin-two);
+  transition: all 1s ease-in-out;
 }
 
+button:hover {
+  opacity: 0.5;
+  box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 80%);
+}
 /* FOOTER */
 
 .footer {
