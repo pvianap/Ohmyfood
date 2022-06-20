@@ -80,7 +80,6 @@ header img {
 
 .localisation-bar i {
   margin-right: 3vw;
-  font-size: ;
 }
 
 .invitation {
@@ -150,6 +149,7 @@ header img {
   align-items: center;
   border-radius: 6vw;
   box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 22%);
+  transition: all 1s ease-in-out;
 }
 .section-two li:before {
   content: counter(item) '  ';
@@ -163,6 +163,11 @@ header img {
   align-items: center;
   color: white;
   margin-left: -2vw;
+}
+
+.section-two li:hover {
+  background-color: var(--grey);
+  box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 44%);
 }
 
 .section-two i {
@@ -326,14 +331,13 @@ img {
   align-items: center;
   justify-content: center;
   display: flex;
-  animation: loading 1.8s ease-in-out;
-  animation-fill-mode: forwards;
+  animation: loading 1.8s ease-in-out forwards;
   opacity: 1;
+  pointer-events: none;
 }
 
 .appear {
-  animation: appearing 2s 1.5s ease-in-out;
-  animation-fill-mode: forwards;
+  animation: appearing 2s 1.5s ease-in-out forwards;
   opacity: 0;
 }
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand:wght@300;400;500;600;700&display=swap');
+
 html {
   --primary-font: roboto;
   --title-font: Shrikhand;
@@ -16,6 +17,7 @@ html {
   --font-size-fonctionnement: 4.1vw;
   font-family: var(--primary-font);
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -94,19 +96,24 @@ header i {
 }
 
 .menu h1 i {
-  color: var(--darkergrey);
   font-size: 7vw;
   margin-right: 6vw;
+  position: relative;
 }
 
 .fa-regular.fa-heart::before {
-  opacity: 0.5;
+  opacity: 1;
   transition: all 0.5s ease-in;
-  font-weight: 200;
+  font-weight: 100;
 }
 
-.fa-regular.fa-heart:hover::before {
-  opacity: 1.2;
+.fa-regular.fa-heart::after {
+  content: '\f004';
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  transition: all 1s ease-in;
   background-image: linear-gradient(
     to bottom right,
     var(--secondary-color),
@@ -118,15 +125,42 @@ header i {
   font-weight: 900;
 }
 
+.fa-regular.fa-heart:hover::after {
+  opacity: 1;
+  transition: all 2s ease-in-out;
+}
+
+/* .fa-regular.fa-heart:hover::before {
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  transition: all 2s ease-in-out;
+} */
+
 .submenu {
 }
 
 .submenu h2 {
-  color: var(--darkergrey);
+  color: black;
   font-size: 4vw;
   margin-top: var(--margin-three);
   opacity: 0;
   animation: appearing 0.5s ease-in-out forwards;
+  font-weight: 100;
+}
+
+.submenu h2::after {
+  border-bottom: solid var(--tertiary-color) 0.5vw;
+  display: block;
+  content: '';
+  width: 9vw;
 }
 
 .food-card {
@@ -150,6 +184,11 @@ header i {
 
 .food-card h3 {
   font-size: 5vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .food-card h5 {
@@ -167,6 +206,11 @@ header i {
 .food-description p {
   color: var(--darkergrey);
   font-size: 4vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 button {
@@ -275,5 +319,16 @@ button:hover {
 
   100% {
     opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .submenu {
+    background-color: red;
+    width: 80vw;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
