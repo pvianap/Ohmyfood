@@ -345,9 +345,11 @@ button:hover {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: flex-start;
   }
   .submenu {
     width: 33vw;
+
     margin: var(--margin-one);
   }
   .food-card {

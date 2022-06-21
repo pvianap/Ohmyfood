@@ -281,31 +281,32 @@ img {
 
 /* FOOTER */
 
-.footer {
+footer {
   background-color: hsl(0deg, 0%, 21%);
   color: white;
   padding: var(--margin-two);
 }
 
-.footer ul {
+footer ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.footer li {
+footer li {
   margin-bottom: 2vw;
+  font-size: 3vw;
 }
-.footer i {
+footer i {
   margin-right: 3vw;
 }
 
-.footer h4 {
+footer h4 {
   font-family: var(--title-font);
   font-size: 5vw;
   font-weight: 400;
 }
-.footer img {
+footer img {
   width: 20vw;
 }
 
@@ -366,5 +367,176 @@ img {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    --primary-font: roboto;
+    --title-font: Shrikhand;
+    --grey: hsl(0deg, 0%, 96%);
+    --lightergrey: rgb(251, 249, 249);
+    --darkergrey: hsl(0deg, 0%, 64%);
+    --primary-color: #9356dc;
+    --secondary-color: #ff79da;
+    --tertiary-color: #99e2d0;
+    --margin-one: 0.8vw;
+    --margin-two: 5%;
+    --margin-three: 8%;
+    --margin-four: 12%;
+    --font-size-fonctionnement: 4.1vw;
+    font-family: var(--primary-font);
+  }
+  .loader {
+    animation: none;
+    opacity: 0;
+  }
+
+  .appear {
+    animation: none;
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  header {
+    width: 100vw;
+    height: 20vw;
+  }
+
+  .section-one {
+    width: 100%;
+    height: 30vw;
+    margin-bottom: 0.9vw;
+  }
+
+  .localisation-bar {
+    background-color: var(--grey);
+    font-size: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+  .invitation {
+    padding: 0;
+    background-color: var(--lightergrey);
+    margin-bottom: 5vw;
+  }
+
+  .invitation h1 {
+    font-size: 4vw;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    width: 100%;
+  }
+
+  .invitation p {
+    font-size: 2vw;
+  }
+
+  .invitation button {
+    font-size: 2vw;
+    width: 30vw;
+    height: 10vw;
+    margin: 2vw;
+  }
+  h1 {
+    font-size: 3vw;
+  }
+  .section-two {
+    width: 50%;
+
+    padding: 2.5vw;
+  }
+
+  .section-two ol {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 2vw;
+  }
+
+  .section-two li {
+    font-size: 2vw;
+    height: 10%;
+    margin: 2vw;
+    width: 80%;
+  }
+
+  .section-two li::before {
+    font-size: 2vw;
+    height: 5vw;
+    width: 5vw;
+  }
+  .section-three {
+    width: 50%;
+    font-size: 5vw;
+    padding-bottom: 5vw;
+    padding: 2.5vw;
+    background-color: white;
+    box-sizing: border-box;
+  }
+
+  .section-three h2 {
+    font-size: 2vw;
+  }
+
+  .section-three h3 {
+    font-size: 2vw;
+  }
+
+  .section-three i {
+    font-size: 3vw;
+  }
+
+  .section-three img {
+    height: 15vw;
+  }
+  .restaurant-card {
+    height: 60%;
+    margin: 0;
+    margin-bottom: 1vw;
+    box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 22%);
+  }
+
+  .card-description {
+    padding: 2vw;
+    width: 95%;
+    margin: 0;
+  }
+
+  .nouveau {
+    font-size: 1vw;
+    height: 2vw;
+    width: 4.5vw;
+    right: 3vw;
+    margin-top: 1vw;
+  }
+
+  footer {
+    width: 100%;
+    max-height: 20vw;
+    bottom: 0;
+    padding: 2vw;
+    display: flex;
+  }
+
+  footer h4 {
+    margin: 0;
+    font-size: 3vw;
+  }
+
+  footer li {
+    font-size: 1.5vw;
+    margin: 0;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5vw;
+    width: 100%;
+    align-items: center;
   }
 }
