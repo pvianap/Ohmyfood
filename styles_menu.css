@@ -323,12 +323,69 @@ button:hover {
 }
 
 @media (min-width: 768px) {
-  .submenu {
-    background-color: red;
-    width: 80vw;
+  html {
+    --primary-font: roboto;
+    --title-font: Shrikhand;
+    --grey: hsl(0deg, 0%, 96%);
+    --lightergrey: rgb(251, 249, 249);
+    --darkergrey: hsl(0deg, 0%, 64%);
+    --primary-color: #9356dc;
+    --secondary-color: #ff79da;
+    --tertiary-color: #99e2d0;
+    --margin-one: 0.8vw;
+    --margin-two: 5%;
+    --margin-three: 8%;
+    --margin-four: 12%;
+    --font-size-fonctionnement: 4.1vw;
+    font-family: var(--primary-font);
   }
+
   .menu {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .submenu {
+    width: 33vw;
+    margin: var(--margin-one);
+  }
+  .food-card {
+    width: 100%;
+    height: 10vw;
+  }
+
+  .food-card h3 {
+    width: 100%;
+    font-size: 1.8vw;
+    -webkit-line-clamp: 1;
+  }
+
+  .food-card h5 {
+    font-size: 1.7vw;
+  }
+
+  .food-description p {
+    font-size: 1.4vw;
+  }
+
+  .food-description {
+    margin: 0;
+  }
+
+  .food-card-content {
+    width: 100%%;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5vw;
+    justify-content: space-between;
+  }
+
+  button {
+    height: 10vw;
+    width: 25vw;
+    margin-left: 35vw;
+    margin-right: 35vw;
+    font-size: 3vw;
   }
 }
