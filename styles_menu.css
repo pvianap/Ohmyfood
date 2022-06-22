@@ -238,33 +238,33 @@ button:hover {
 }
 /* FOOTER */
 
-.footer {
+footer {
   background-color: hsl(0deg, 0%, 21%);
   color: white;
   padding: var(--margin-two);
 }
 
-.footer ul {
+footer ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.footer li {
+footer li {
   margin-bottom: 2vw;
   font-size: 4vw;
 }
-.footer i {
+footer i {
   margin-right: 3vw;
   font-size: 4vw;
 }
 
-.footer h4 {
+footer h4 {
   font-family: var(--title-font);
   font-size: 5vw;
   font-weight: 400;
 }
-.footer img {
+footer img {
   width: 20vw;
 }
 
@@ -296,7 +296,7 @@ button:hover {
   background-color: var(--tertiary-color);
   display: flex;
   border-radius: 0 3vw 3vw 0;
-  transition: 220ms ease-in-out;
+  transition: 1s ease-in-out;
   font-size: 0;
   color: white;
   align-items: center;
@@ -305,7 +305,7 @@ button:hover {
   opacity: 0;
 }
 
-.food-card-content:active ~ .fa-solid.fa-circle-check {
+.food-card-content:hover ~ .fa-solid.fa-circle-check {
   background-color: var(--tertiary-color);
   width: 20vw;
   opacity: 1;
@@ -376,7 +376,7 @@ button:hover {
   }
 
   .food-card-content {
-    width: 100%%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 2.5vw;
