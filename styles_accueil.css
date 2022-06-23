@@ -32,6 +32,8 @@ a:active {
 body,
 h2,
 h3,
+h5,
+h6,
 p {
   margin: 0;
 }
@@ -268,12 +270,12 @@ header img {
   right: 0;
 }
 
-.card-description h2 {
+.card-description h5 {
   font-size: 5vw;
   font-weight: 700;
 }
 
-.card-description h3 {
+.card-description h6 {
   font-size: 4vw;
   font-weight: 500;
   color: hsl(0deg, 0%, 35%);
@@ -554,7 +556,7 @@ footer img {
     margin: 20px;
   }
 
-  .section-three h2 {
+  .section-three h5 {
     font-size: 1.5rem;
   }
   .section-three h4 {
@@ -563,7 +565,7 @@ footer img {
     margin: 20px;
     text-align: center;
   }
-  .section-three h3 {
+  .section-three h6 {
     font-size: 1rem;
   }
 
