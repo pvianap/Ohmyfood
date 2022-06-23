@@ -10,11 +10,11 @@ html {
   --primary-color: #9356dc;
   --secondary-color: #ff79da;
   --tertiary-color: #99e2d0;
-  --margin-one: 1vw;
-  --margin-two: 5vw;
-  --margin-three: 8vw;
-  --margin-four: 12vw;
-  --font-size-fonctionnement: 4.1vw;
+  --margin-one: 1vmin;
+  --margin-two: 5vmin;
+  --margin-three: 8vmin;
+  --margin-four: 12vmin;
+  --font-size-fonctionnement: 4.1vmin;
   font-family: var(--primary-font);
 }
 
@@ -34,6 +34,7 @@ a:active {
   display: flex;
   align-items: center;
 }
+
 /* HEADER */
 
 header {
@@ -47,25 +48,25 @@ header {
   align-items: center;
   margin-top: var(--margin-one);
   margin-bottom: var(--margin-one);
-  height: 12vw;
+  height: 12vmin;
 }
 header img {
   width: 100%;
-  height: 65vw;
+  height: 65vmin;
   object-fit: cover;
   z-index: -10;
 }
 
 .logo {
   margin: var(--margin-one);
-  width: 38vw;
+  width: 38vmin;
   height: initial;
   object-position: initial;
 }
 
 header i {
   position: absolute;
-  font-size: 5vw;
+  font-size: 5vmin;
   left: 0;
   margin-left: var(--margin-two);
 }
@@ -75,10 +76,10 @@ header i {
 .menu {
   z-index: 2;
   background-color: var(--grey);
-  margin-top: -10vw;
-  border-top-left-radius: 6vw;
-  border-top-right-radius: 6vw;
-  padding: 3vw;
+  margin-top: -10vmin;
+  border-top-left-radius: 6vmin;
+  border-top-right-radius: 6vmin;
+  padding: 3vmin;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,18 +87,18 @@ header i {
 
 .menu h1 {
   font-family: var(--title-font);
-  font-size: 8vw;
+  font-size: 8vmin;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90vw;
+  width: 90vmin;
   opacity: 0;
   animation: appearing 1.5s ease-in-out forwards;
 }
 
 .menu h1 i {
-  font-size: 7vw;
-  margin-right: 6vw;
+  font-size: 7vmin;
+  margin-right: 6vmin;
   position: relative;
 }
 
@@ -149,7 +150,7 @@ header i {
 
 .submenu h2 {
   color: black;
-  font-size: 4vw;
+  font-size: 4vmin;
   margin-top: var(--margin-three);
   opacity: 0;
   animation: appearing 0.5s ease-in-out forwards;
@@ -157,18 +158,18 @@ header i {
 }
 
 .submenu h2::after {
-  border-bottom: solid var(--tertiary-color) 0.5vw;
+  border-bottom: solid var(--tertiary-color) 0.5vmin;
   display: block;
   content: '';
-  width: 9vw;
+  width: 9vmin;
 }
 
 .food-card {
   background-color: white;
-  border-radius: 3vw;
-  width: 90vw;
-  height: 18vw;
-  margin-top: 3vw;
+  border-radius: 3vmin;
+  width: 90vmin;
+  height: 18vmin;
+  margin-top: 3vmin;
   opacity: 0;
   animation: appearing 1s ease-in-out forwards;
   display: flex;
@@ -179,11 +180,11 @@ header i {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 2vw;
+  padding: 2vmin;
 }
 
 .food-card h3 {
-  font-size: 5vw;
+  font-size: 5vmin;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -192,7 +193,7 @@ header i {
 }
 
 .food-card h5 {
-  font-size: 4vw;
+  font-size: 4vmin;
 }
 
 .food-description {
@@ -200,12 +201,12 @@ header i {
   flex-direction: row;
   justify-content: space-between;
   margin: var(--margin-one);
-  margin-right: 5vw;
+  margin-right: 5vmin;
 }
 
 .food-description p {
   color: var(--darkergrey);
-  font-size: 4vw;
+  font-size: 4vmin;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -214,11 +215,11 @@ header i {
 }
 
 button {
-  height: 14vw;
-  width: 60vw;
-  border-radius: 10vw;
+  height: 14vmin;
+  width: 60vmin;
+  border-radius: 10vmin;
   font-family: var(--primary-font);
-  font-size: 4.1vw;
+  font-size: 4.1vmin;
   font-weight: 450;
   color: white;
   background-image: linear-gradient(
@@ -227,14 +228,14 @@ button {
     var(--primary-color)
   );
   border: none;
-  box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 39%);
+  box-shadow: 2vmin 2vmin 3vmin -1vmin rgb(0 0 0 / 39%);
   margin: var(--margin-two);
   transition: all 1s ease-in-out;
 }
 
 button:hover {
   opacity: 0.5;
-  box-shadow: 2vw 2vw 3vw -1vw rgb(0 0 0 / 80%);
+  box-shadow: 2vmin 2vmin 3vmin -1vmin rgb(0 0 0 / 80%);
 }
 /* FOOTER */
 
@@ -251,21 +252,21 @@ footer ul {
 }
 
 footer li {
-  margin-bottom: 2vw;
-  font-size: 4vw;
+  margin-bottom: 2vmin;
+  font-size: 4vmin;
 }
 footer i {
-  margin-right: 3vw;
-  font-size: 4vw;
+  margin-right: 3vmin;
+  font-size: 4vmin;
 }
 
 footer h4 {
   font-family: var(--title-font);
-  font-size: 5vw;
+  font-size: 5vmin;
   font-weight: 400;
 }
 footer img {
-  width: 20vw;
+  width: 20vmin;
 }
 
 /* ANIMATIONS */
@@ -295,25 +296,25 @@ footer img {
   height: 100%;
   background-color: var(--tertiary-color);
   display: flex;
-  border-radius: 0 3vw 3vw 0;
+  border-radius: 0 3vmin 3vmin 0;
   transition: 1s ease-in-out;
   font-size: 0;
   color: white;
   align-items: center;
   justify-content: center;
-  font-size: 5vw;
+  font-size: 5vmin;
   opacity: 0;
 }
 
 .food-card-content:hover ~ .fa-solid.fa-circle-check {
   background-color: var(--tertiary-color);
-  width: 20vw;
+  width: 20vmin;
   opacity: 1;
 }
 
 @keyframes appearing {
   0% {
-    margin-top: 10vw;
+    margin-top: 10vmin;
     opacity: 0;
   }
 
@@ -332,43 +333,52 @@ footer img {
     --primary-color: #9356dc;
     --secondary-color: #ff79da;
     --tertiary-color: #99e2d0;
-    --margin-one: 0.8vw;
+    --margin-one: 0.8vmin;
     --margin-two: 5%;
     --margin-three: 8%;
     --margin-four: 12%;
-    --font-size-fonctionnement: 4.1vw;
+    --font-size-fonctionnement: 4.1vmin;
     font-family: var(--primary-font);
   }
 
   .menu {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
+    width: 80vmin;
   }
+
+  .menu h1,
+  .menu i {
+    font-size: 5vmin;
+  }
+
   .submenu {
-    width: 33vw;
+    width: 33vmin;
 
     margin: var(--margin-one);
   }
   .food-card {
     width: 100%;
-    height: 10vw;
+    height: 10vmin;
   }
 
   .food-card h3 {
     width: 100%;
-    font-size: 1.8vw;
+    font-size: 1.8vmin;
     -webkit-line-clamp: 1;
   }
 
   .food-card h5 {
-    font-size: 1.7vw;
+    font-size: 1.7vmin;
   }
 
   .food-description p {
-    font-size: 1.4vw;
+    font-size: 1.4vmin;
   }
 
   .food-description {
@@ -379,15 +389,49 @@ footer img {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 2.5vw;
+    padding: 2.5vmin;
     justify-content: space-between;
   }
 
   button {
-    height: 10vw;
-    width: 25vw;
-    margin-left: 35vw;
-    margin-right: 35vw;
-    font-size: 3vw;
+    height: 10vmin;
+    width: 25vmin;
+    margin-left: 35vmin;
+    margin-right: 35vmin;
+    font-size: 3vmin;
+    padding: 2vmin;
+  }
+
+  footer {
+    width: 100%;
+    min-height: 150px;
+    bottom: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer h4 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+
+  footer li {
+    font-size: 1.2rem;
+    margin: 4px;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5vw;
+    flex-direction: column;
+  }
+
+  footer i {
+    margin: 2px;
+    font-size: 2vmin;
   }
 }
